@@ -1,10 +1,11 @@
-# About this repository
-## Background notes
-Originally started with a modified version of [Tania Rascia](https://www.taniarascia.com)'s [webpack Boilerplate](https://github.com/taniarascia/webpack-boilerplate), because using Node allows us to precompile handlebars templates for faster rendering, and webpack let us bundle the necessary code without intererence from the built-in versions of the same packages in PowerSchool (specifically, Handlebars was giving problems.). 
+# Student Information Form
+This PowerSchool plug-in adds a web report version of the Student Information Form to the system. Built with HandlebarsJS and Webpack.
 
-To simplify, I updated Webpack config to support multiple entry points, so all report cards can live together easily, and removed Babel as a dependencies, since we have no need to transpile ES6. I also made a few changes to the production output to make it easier to debug, since we can't run a dev server like most projects, as this code only runs within the PowerSchool environment and debugging has to happen there.
+# To Access the Form
+1. Make a selection of students
+2. Group the Group Functions menu or the System Reports page, select Student Information Report.
 
-## Installing thie repo
+## Installing th repo
 *Note: these are not the instructions for installing a plugin in PowerSchool. These are the instructions for installing the repo on your local machine for development purposes.
 
 Clone this repo and npm install (note: unless you have admin rights, an EUS Technician from ITSS will have to install Node on your machine - get them to select the latest LTS version.)

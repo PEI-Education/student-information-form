@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const paths = require('./paths')
 
-const pages = ["index"];
+const pages = ["student_info"];
 
 module.exports = {
   // Where webpack looks to start building the bundle

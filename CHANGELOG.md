@@ -1,3 +1,3 @@
 # Change Log
-## v1.0 - July 13. 2023
-Initial commit of generic Handlebars repo.
+##v0.1.0
+Initial commit of Student Information Form. Initial English version ready for test.

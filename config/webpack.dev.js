@@ -15,8 +15,9 @@ module.exports = merge(common, {
   output: {
     path: paths.start,
     filename: '[name].bundle.js',
-    publicPath: '/',
-    hashFunction: "xxhash64"  
+    publicPath: './',
+    hashFunction: "xxhash64",
+    filename: 'js/[name].bundle[contenthash].js', 
   },
   // Spin up a server for quick development
   devServer: {

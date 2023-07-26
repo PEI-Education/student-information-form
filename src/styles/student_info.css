@@ -1,0 +1,174 @@
+@charset "UTF-8";
+/* CSS Document */
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+   font-size: 9pt;
+}
+
+.page {
+   display: block;
+   position: relative;
+   height: 10.5in;
+   width: 8in;
+   max-width: 8in;
+   margin: 0.25in;
+   page-break-after: always;
+}
+
+/* Table styles */
+table {  
+   width: 8in;
+   margin-bottom: 0.07in;
+   border-collapse: collapse;
+   width: 8in;
+   max-width: 8in;
+}
+
+tr {
+   border-collapse:collapse;
+}
+td, th {
+   padding: 0.05in;
+   border-collapse: collapse;
+}
+
+thead {
+   font-weight: bold;
+   background-color: lightgray;
+   text-align: left;
+}
+
+.rightfloat {
+   float: right;
+   margin-right: 0.1in;
+}
+
+.noborder {
+   border: none;
+}
+
+.border {
+   border: 1px solid black;
+}
+
+.brokenborder {
+   border: 1px dashed black 
+}
+
+.fieldnames {
+   font-size: 7pt;
+   height: 10pt;
+   vertical-align: top;
+   border-top: 1px solid black;
+}
+
+.blank {
+   border-bottom: 1px solid black;
+}
+
+.tallblank {
+   height: 1in;
+   vertical-align: top;
+}
+
+.top {
+   vertical-align: top
+}
+
+.nest {
+   padding: 0in !important;
+}
+
+.nested {
+   margin: 0.1in 0;
+   border: none;
+   padding: 0.05in;
+}
+
+.nestedtoponly {
+   border: none;
+   padding: 0.1in 0.05in;
+}
+
+.nopadding {
+   padding: 0;
+}
+
+.contact {
+   border-bottom: 1px dashed black;
+   padding: 0;
+   margin-bottom: 0.05in;
+}
+
+.contact td {
+   padding: 0.03in;
+}
+
+.phoneblock, .attrRow, .smopt {
+   margin: 0.05in 0 0 0;
+}
+
+.phoneblock {
+   height: 0.2in;
+}
+
+.attrRow, .smopt {
+   height: 0.3in;
+}
+
+.phoneblock td {
+   padding: 0.01in 0.05in;
+}
+
+.signature {
+   position: absolute;
+   bottom: 0;
+}
+
+/* Heading/warning styles */
+h1, h2 {
+   text-align: center;
+}
+
+h1 {
+   font-size: 2em;
+   margin-bottom: 0.05in;
+}
+
+.note {
+   font-size: 11pt;
+   font-style: italic;
+   font-weight: bold;
+}
+
+.thnote {
+   font-weight: normal;
+   font-style: italic;
+}
+
+.smallnote {
+   font-size: 7pt;
+}
+
+/* General font styles */
+.center {
+   text-align: center;  
+}
+
+.bold {
+   font-weight: bold;
+}
+
+.italic {
+   font-style: italic;
+}
+
+.sigline {
+   vertical-align: bottom;
+   text-align: right;
+   height: 0.5in;
+}

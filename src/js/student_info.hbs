@@ -1,0 +1,1824 @@
+{{#each students}}
+ <div class="page">
+        <h1>Public Schools Branch Student Information Form</h1>
+        <table>
+          <colgroup>
+            <col style="width: 5.5in" />
+            <col style="width: 2.5in" />
+          </colgroup>
+          <tr>
+            <td class="no-border">
+              <span class="note">Dear Parent/Guardian: Please review the following inormation and note any missing, corrected, or changed information next to the item. PLEASE RETURN THE COMPLETED AND SIGNED FORM TO THE SCHOOL AS SOON AS POSSIBLE.</span>
+            </td>
+            <td class="border">
+              Homeroom:
+              {{home_room}}<br />
+              Student Number:
+              {{student_number}}<br />
+              Grade:
+              {{grade_level}}
+            </td>
+          </tr>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 1.25in;" />
+            <col style="width: 1.25in;" />
+            <col style="width: 1in" />
+            <col style="width: 2.25in;" />
+            <col style="width: 2.25in;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="5">Student Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Common name:</strong>
+              </td>
+              <td colspan="2">{{last_name}}</td>
+              <td>{{first_name}}</td>
+              <td>{{middle_name}}</td>
+            </tr>
+            <tr>
+              <td class=""></td>
+              <td colspan="2" class="fieldnames">Last</td>
+              <td class="fieldnames">First</td>
+              <td class="fieldnames">Middle</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Full legal name:</strong>
+              </td>
+              <td colspan="2">{{legal_last_name}}</td>
+              <td>{{legal_first_name}}</td>
+              <td>{{legal_middle_name}}</td>
+            </tr>
+            <tr>
+              <td class=""></td>
+              <td colspan="2" class="fieldnames">Last</td>
+              <td class="fieldnames">First</td>
+              <td class="fieldnames">Middle</td>
+            </tr>
+            <tr>
+              <td class="nest" colspan="5">
+                <table class="nestedtoponly">
+                  <colgroup>
+                    <col style="width: 1.25in;" />
+                    <col style="width: 1in;" />
+                    <col style="width: 1in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 1.7in;" />
+                  </colgroup>
+                  <tr>
+                    <td>
+                      <strong>Date of birth:</strong>
+                    </td>
+                    <td>{{dob}}</td>
+                    <td class="center">
+                      <strong>Gender:</strong>
+                    </td>
+                    <td class="border center">{{#if gender.f}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>Female</td>
+                    <td class="border center">{{#if gender.m}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>Male</td>
+                    <td class="border center">{{#if gender.u}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>Undisclosed</td>
+                    <td class="border center">{{#if gender.x}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>Identify another way</td>
+                  </tr>
+                  <tr>
+                    <td class=""></td>
+                    <td class="fieldnames">mm/dd/yyyy</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <strong>List any siblings the student has at this school:</strong>
+              </td>
+              <td colspan="2" class="blank">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 1.5in;" />
+            <col style="width: 1.5in;" />
+        <col style="width: 1in" />
+            <col style="width: 3in" />
+        <col style="width: 1in" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="5">Student Demographics
+                <span class="rightfloat thnote">Student contacts on reverse</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Home address:</strong>
+              </td>
+              <td colspan="4" class="blank">{{ home_address }}</td>
+            </tr>
+      		  <tr>
+              <td>
+                <strong>Home phone:</strong>
+              </td>
+              <td colspan="4" class="blank">{{ home_phone }}</td>
+            </tr>
+            <tr>
+              <td colspan="5" class="smallnote">
+                Alternate student addresses are list below. If the student has an alternate address, please indicate the address and the type. <br>
+                Examples of address types include: Home1 (alternate home, i.e. lives with both parents, separately), After School, Before School, Before and After School and Emergency Closure.<br>
+                <span class="smallnote bold">To update one of the alternate addresses, cross out the address and list the new one in a blank space.</span>
+              </td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th class="border">Address Type</th>
+              <th class="border">Address Label</th>
+              <th colspan="3" class="border">Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="brokenborder">{{ alt_address1_type }}&nbsp;</td>
+              <td class="brokenborder">{{ alt_address1_label }}&nbsp;</td>
+              <td class="brokenborder" colspan="3">{{ alt_address1 }}&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="brokenborder">{{ alt_address2_type }}&nbsp;</td>
+              <td class="brokenborder">{{ alt_address2_label }}&nbsp;</td>
+              <td class="brokenborder" colspan="3">{{ alt_address2 }}&nbsp;</td>
+            </tr>
+            {{#if alt_address2}}
+            <tr>
+              <td class="brokenborder">&nbsp;</td>
+              <td class="brokenborder">&nbsp;</td>
+              <td class="brokenborder smallnote floatright" colspan="3">&nbsp;</td>
+            </tr>
+            {{/if}}
+            <tr>
+              <td><strong>Student Lives With:</strong></td>
+              <td class="blank" colspan="4">{{ guardianship }}</td>
+            </tr>
+              <td colspan="2"><strong>Access to high speed internet at home?</strong></td>
+              <td class="blank">{{ has_internet }}</td>
+              <td><strong>Access to a computer/Chromebook/tablet?</strong></td>
+              <td class="blank">{{ has_device }}</td>
+            </tr>
+            <tr>
+              <td class="smallnote" colspan="52">
+                The information is recorded each year. Y## = Yes as of the year indicated and N## = No as of the year indicated. E.g. N21 = No, Y21 = Yes
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 3in;" />
+            <col style="width: 1in;" />
+            <col style="width: 3in" />
+            <col style="width: 1in;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="4">Student Health Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Student has a life-threatening allergy:</strong>
+              </td>
+              <td class="blank">{{ life_threatening_allergy }}</td>
+              <td><strong>Health Concerns:</strong></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><strong>Student requires an Epi-Pen for use at school: </strong></td>
+              <td class="blank">{{ epipen }}</td>
+              <td><strong>Medications:</strong></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="top">
+                <strong>Substance(s) which cause life-threatening allergy	or medical condition:</strong>
+              </td>
+              <td colspan="2" class="top">
+                <strong>Special Medical Considerations</strong><br>
+                <span class="smallnote">(for non-life-threatening conditions, i.e. wears eyeglasses, frequent nosebleeds, etc.)</span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="tallblank">{{ alert_medical }}&nbsp;</td>
+              <td colspan="2" class="tallblank">{{ medical_considerations }}&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 2.25in;" />
+            <col style="width: 2.25in;" />
+            <col style="width: 3.5in;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="3">Indigenous Persons Self-Identification (optional)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Student is currently recorded as:</strong></td>
+              <td class="blank">{{ indigenous }}</td>
+              <td class="italic">Respond below if this information is no longer correct.</td>
+            </tr>
+            <tr>
+              <td class="nest" colspan="3">
+                <table class="nested">
+                  <colgroup>
+                    <col style="width: 6in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                  </colgroup>
+                  <tr>
+                    <td><strong>Does the student identify as an Indigenous person; that is, First Nation,
+                      Metis, or Inuk (Inuit)?</strong></td>
+                    <td class="border"></td>
+                    <td>Yes</td>
+                    <td class="border"></td>
+                    <td>No</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="nest" colspan="3">
+                <table class="nested">
+                  <colgroup>
+                    <col style="width: 3in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 2.2in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 2.2sin;" />
+                  </colgroup>
+                  <tr>
+                    <td><strong>If Yes,</strong> which best describes the student?</td>
+                    <td class="border"></td>
+                    <td>First Nations - living on reserve</td>
+                    <td class="border"></td>
+                    <td>Inuk (Inuit)</td>
+                  </tr>
+                  <tr style="padding-bottom: 0.05in;">
+                    <td class="final"></td>
+                    <td class="border final"></td>
+                    <td class="final">First Nations - living off reserve</td>
+                    <td class="border final"></td>
+                    <td>Métis</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="page">
+        <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+        <table class="border">
+          <thead>
+            <tr>
+              <th>Transportation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Transportation is managed through BusPlanner (<span class="link">https://psbbusing.princeedwardisland.ca/Login</span>). Please log into your BusPlanner account to view your student's transportation arrangements. If there are changes to be made, please contact your school. If you require further information or clarification, please contact Transportation Services at 902.368.6990 or 1.800.280.7965 toll free.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <thead>
+            <tr>
+              <th colspan="5">Student Contacts <span class="rightfloat thnote">To remove a contact, cross out the entire contact with an X</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nest">
+                {{#with contacts.[0]}}
+                <table class="contact">
+                  <colgroup>
+                    <col style="width: 1.3in;" />
+                    <col style="width: 1.75in;" />
+                    <col style="width: 1.75in;" />
+                    <col style="width: 1.75in;" />
+                    <col style="width: 1.15in" />
+                  </colgroup>
+                  <tbody class="contact">
+                      <tr>
+                        <td><strong>Contact name:</strong></td>
+                        <td>{{ last_name }}</td>
+                        <td>{{ first_name }}</td>
+                        <td><strong>Relationship to student:</strong></td>
+                        <td class="blank">{{ relationship }}</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="fieldnames">
+                          Last name
+                        </td>
+                        <td class="fieldnames">
+                          First name
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>Email Address(es):</strong></td>
+                        <td colspan="4" class="blank">{{ emails }}</td>
+                      </tr>
+                      <tr>
+                        <td class="nest" colspan="5">
+                          <table class="phoneblock">
+                            <colgroup>
+                              <col style="width: 1.3in;" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                              <td><strong>Phone number(s):</strong></td>
+                              {{#with phone_numbers.[0]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[1]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[2]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                            </tr>
+                            <tr>
+                              <td class="smallnote"><i class="fi-check"> = preferred</i></td>
+                              {{#if phone_numbers.[3]}}
+                              {{#with phone_numbers.[3]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{/if}}
+                              {{#with phone_numbers.[4]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[5]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                            </tr>
+                            {{#if phone_numbers.[6]}}
+                            <tr>
+                              <td></td>
+                              {{#with phone_numbers.[6]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[7]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[8]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                            </tr>
+                            {{/if}}
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="nest" colspan="5">
+                          <table class="attrRow">
+                            <colgroup>
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                            </colgroup>
+                            <tr>
+                              <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                              <td>Lives With</td>
+                              <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                              <td>School Pick Up</td>
+                              <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                              <td>Emergency Contact</td>
+                              <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                              <td>Receives Mail</td>
+                              <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                              <td>Portal Access</td>
+                            </tr>
+                          </table>
+                          <table class="smopt">
+                            <colgroup>
+                              <col style="width: 0.3in;" />
+                              <col style="width: 2in;"/>
+                              <col />
+                            </colgroup>
+                            <tr>
+                              <td class="border"></td>
+                              <td>School Messenger Opt-Out</td>
+                              <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                {{/with}}
+                {{#if contacts.[1]}}
+                {{#with contacts.[1]}}
+                <table class="contact">
+                  <colgroup>
+                    <col style="width: 1.3in;" />
+                    <col style="width: 1.795in;" />
+                    <col style="width: 1.75in;" />
+                    <col style="width: 1.75in;" />
+                    <col style="width: 1.15in" />
+                  </colgroup>
+                  <tbody class="contact">
+                      <tr>
+                        <td><strong>Contact name:</strong></td>
+                        <td>{{ last_name }}</td>
+                        <td>{{ first_name }}</td>
+                        <td><strong>Relationship to student:</strong></td>
+                        <td class="blank">{{ relationship }}</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="fieldnames">
+                          Last name
+                        </td>
+                        <td class="fieldnames">
+                          First name
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>Email Address(es):</strong></td>
+                        <td colspan="4" class="blank">{{ emails }}</td>
+                      </tr>
+                      <tr>
+                        <td class="nest" colspan="5">
+                          <table class="phoneblock">
+                            <colgroup>
+                              <col style="width: 1.3in;" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                              <td><strong>Phone number(s):</strong></td>
+                              {{#with phone_numbers.[0]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[1]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[2]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                            </tr>
+                            {{#if phone_numbers.[3]}}
+                              <tr>
+                                <td></td>
+                                {{#with phone_numbers.[3]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[4]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[5]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                              </tr>
+                            {{/if}}
+                            {{#if phone_numbers.[6]}}
+                            <tr>
+                              <td></td>
+                              {{#with phone_numbers.[6]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[7]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[8]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                            </tr>
+                            {{/if}}
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="nest" colspan="5">
+                          <table class="attrRow">
+                            <colgroup>
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                            </colgroup>
+                            <tr>
+                              <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                              <td>Lives With</td>
+                              <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                              <td>School Pick Up</td>
+                              <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                              <td>Emergency Contact</td>
+                              <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                              <td>Receives Mail</td>
+                              <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                              <td>Portal Access</td>
+                            </tr>
+                          </table>
+                          <table class="smopt">
+                            <colgroup>
+                              <col style="width: 0.3in;" />
+                              <col style="width: 2in;"/>
+                              <col />
+                            </colgroup>
+                            <tr>
+                              <td class="border"></td>
+                              <td>School Messenger Opt-Out</td>
+                              <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                {{/with}}
+                {{/if}}
+                {{#if contacts.[2]}}
+                  {{#with contacts.[2]}}
+                  <table class="contact">
+                    <colgroup>
+                      <col style="width: 1.5in;" />
+                      <col style="width: 1.75in;" />
+                      <col style="width: 1.75in;" />
+                      <col style="width: 1.75in;" />
+                      <col style="width: 1.15in" />
+                    </colgroup>
+                    <tbody class="contact">
+                        <tr>
+                          <td><strong>Contact name:</strong></td>
+                          <td>{{ last_name }}</td>
+                          <td>{{ first_name }}</td>
+                          <td><strong>Relationship to student:</strong></td>
+                          <td class="blank">{{ relationship }}</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="fieldnames">
+                            Last name
+                          </td>
+                          <td class="fieldnames">
+                            First name
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Email Address(es):</strong></td>
+                          <td colspan="4" class="blank">{{ emails }}</td>
+                        </tr>
+                        <tr>
+                          <td class="nest" colspan="5">
+                            <table class="phoneblock">
+                              <colgroup>
+                                <col style="width: 1.3in;" />
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <td><strong>Phone number(s):</strong></td>
+                                {{#with phone_numbers.[0]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[1]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[2]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                              </tr>
+                              {{#if phone_numbers.[3]}}
+                                <tr>
+                                  <td></td>
+                                  {{#with phone_numbers.[3]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[4]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[5]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                </tr>
+                              {{/if}}
+                              {{#if phone_numbers.[6]}}
+                              <tr>
+                                <td></td>
+                                {{#with phone_numbers.[6]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[7]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[8]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                              </tr>
+                              {{/if}}
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="nest" colspan="5">
+                            <table class="attrRow">
+                              <colgroup>
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                              </colgroup>
+                              <tr>
+                                <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                                <td>Lives With</td>
+                                <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                                <td>School Pick Up</td>
+                                <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                                <td>Emergency Contact</td>
+                                <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                                <td>Receives Mail</td>
+                                <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                                <td>Portal Access</td>
+                              </tr>
+                            </table>
+                            <table class="smopt">
+                              <colgroup>
+                                <col style="width: 0.3in;" />
+                                <col style="width: 2in;"/>
+                                <col />
+                              </colgroup>
+                              <tr>
+                                <td class="border"></td>
+                                <td>School Messenger Opt-Out</td>
+                                <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  {{/with}}
+                {{/if}}
+                {{#if contacts.[3]}}
+                  {{#with contacts.[3]}}
+                  <table class="contact">
+                    <colgroup>
+                      <col style="width: 1.3in;" />
+                      <col style="width: 1.95in;" />
+                      <col style="width: 1.75in;" />
+                      <col style="width: 1.75in;" />
+                      <col style="width: 1.15in" />
+                    </colgroup>
+                    <tbody class="contact">
+                        <tr>
+                          <td><strong>Contact name:</strong></td>
+                          <td>{{ last_name }}</td>
+                          <td>{{ first_name }}</td>
+                          <td><strong>Relationship to student:</strong></td>
+                          <td class="blank">{{ relationship }}</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="fieldnames">
+                            Last name
+                          </td>
+                          <td class="fieldnames">
+                            First name
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Email Address(es):</strong></td>
+                          <td colspan="4" class="blank">{{ emails }}</td>
+                        </tr>
+                        <tr>
+                          <td class="nest" colspan="5">
+                            <table class="phoneblock">
+                              <colgroup>
+                                <col style="width: 1.3in;" />
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <td><strong>Phone number(s):</strong></td>
+                                {{#with phone_numbers.[0]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[1]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[2]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                              </tr>
+                              {{#if phone_numbers.[3]}}
+                                <tr>
+                                  <td></td>
+                                  {{#with phone_numbers.[3]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[4]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[5]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                </tr>
+                              {{/if}}
+                              {{#if phone_numbers.[6]}}
+                              <tr>
+                                <td></td>
+                                {{#with phone_numbers.[6]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[7]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[8]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                              </tr>
+                              {{/if}}
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="nest" colspan="5">
+                            <table class="attrRow">
+                              <colgroup>
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                              </colgroup>
+                              <tr>
+                                <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                                <td>Lives With</td>
+                                <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                                <td>School Pick Up</td>
+                                <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                                <td>Emergency Contact</td>
+                                <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                                <td>Receives Mail</td>
+                                <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                                <td>Portal Access</td>
+                              </tr>
+                            </table>
+                            <table class="smopt">
+                              <colgroup>
+                                <col style="width: 0.3in;" />
+                                <col style="width: 2in;"/>
+                                <col />
+                              </colgroup>
+                              <tr>
+                                <td class="border"></td>
+                                <td>School Messenger Opt-Out</td>
+                                <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  {{/with}}
+                {{/if}}
+              </td>
+            </tr>
+            {{#if contacts.[4]}}
+              <tr>
+                <td class="center"><strong>See next page for additional contacts.</strong></td>
+              </tr>
+            {{/if}}
+          </tbody>
+        </table>
+        <div class="signature">
+          <table class="border">
+            <thead>
+              <tr>
+                <td>Acknowledgement</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Personal information on this form is collected under section 5B of the Education Act and section 31(c) of the FOIPP Act as it relates directly to and is necessary for providing services to students of the Public Schools Branch. If you have questions about this collection of information, you may contact the Public Schools Branch by telephone at 902.368.6990, 902.888.8400, or toll free at 1.800.280.7965.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="noborder">
+            <colgroup>
+              <col style="width: 2in;" />
+              <col style="width: 4.25in;" />
+              <col style="width: 0.75in;" />
+              <col style="width: 1in;" />
+            </colgroup>
+            <tr>
+              <td class="sigline">Signature of Legal Guardian, Custodial Parent or Custodian: </td>
+              <td class="blank"></td>
+              <td class="sigline">Date:</td>
+              <td class="blank"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+<!-- Supplemental pages -->
+      {{#if supplemental_required}}
+        <div class="page">
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+          {{#if contacts.[4]}}
+            <table class="border">
+              <thead>
+                <tr>
+                  <th>Additional Contacts <span class="rightfloat thnote">To remove a contact, cross out the entire contact with an X</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="nest">
+                    {{#with contacts.[4]}}
+                    <table class="contact">
+                      <colgroup>
+                        <col style="width: 1.3in;" />
+                        <col style="width: 1.95in;" />
+                        <col style="width: 1.75in;" />
+                        <col style="width: 1.75in;" />
+                        <col style="width: 1.15in" />
+                      </colgroup>
+                      <tbody class="contact">
+                          <tr>
+                            <td><strong>Contact name:</strong></td>
+                            <td>{{ last_name }}</td>
+                            <td>{{ first_name }}</td>
+                            <td><strong>Relationship to student:</strong></td>
+                            <td class="blank">{{ relationship }}</td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td class="fieldnames">
+                              Last name
+                            </td>
+                            <td class="fieldnames">
+                              First name
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><strong>Email Address(es):</strong></td>
+                            <td colspan="4" class="blank">{{ emails }}</td>
+                          </tr>
+                          <tr>
+                            <td class="nest" colspan="5">
+                              <table class="phoneblock">
+                                <colgroup>
+                                  <col style="width: 1.3in;" />
+                                </colgroup>
+                                <tbody>
+                                <tr> 
+                                  <td><strong>Phone number(s):</strong></td>
+                                  {{#with phone_numbers.[0]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[1]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[2]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                </tr>
+                                {{#if phone_numbers.[3]}}
+                                  <tr>
+                                    <td></td>
+                                    {{#with phone_numbers.[3]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                    {{#with phone_numbers.[4]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                    {{#with phone_numbers.[5]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                  </tr>
+                                {{/if}}
+                                {{#if phone_numbers.[6]}}
+                                <tr>
+                                  <td></td>
+                                  {{#with phone_numbers.[6]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[7]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[8]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                </tr>
+                                {{/if}}
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nest" colspan="5">
+                              <table class="attrRow">
+                                <colgroup>
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                </colgroup>
+                                <tr>
+                                  <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                                  <td>Lives With</td>
+                                  <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                                  <td>School Pick Up</td>
+                                  <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                                  <td>Emergency Contact</td>
+                                  <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                                  <td>Receives Mail</td>
+                                  <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                                  <td>Portal Access</td>
+                                </tr>
+                              </table>
+                              <table class="smopt">
+                                <colgroup>
+                                  <col style="width: 0.3in;" />
+                                  <col style="width: 2in;"/>
+                                  <col />
+                                </colgroup>
+                                <tr>
+                                  <td class="border"></td>
+                                  <td>School Messenger Opt-Out</td>
+                                  <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    {{/with}}
+                    {{#if contacts.[5]}}
+                      {{#with contacts.[5]}}
+                      <table class="contact">
+                        <colgroup>
+                          <col style="width: 1.3in;" />
+                          <col style="width: 1.95in;" />
+                          <col style="width: 1.75in;" />
+                          <col style="width: 1.75in;" />
+                          <col style="width: 1.15in" />
+                        </colgroup>
+                        <tbody class="contact">
+                          <tr>
+                            <td><strong>Contact name:</strong></td>
+                            <td>{{ last_name }}</td>
+                            <td>{{ first_name }}</td>
+                            <td><strong>Relationship to student:</strong></td>
+                            <td class="blank">{{ relationship }}</td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td class="fieldnames">
+                              Last name
+                            </td>
+                            <td class="fieldnames">
+                              First name
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><strong>Email Address(es):</strong></td>
+                            <td colspan="4" class="blank">{{ emails }}</td>
+                          </tr>
+                          <tr>
+                            <td class="nest" colspan="5">
+                              <table class="phoneblock">
+                                <colgroup>
+                                  <col style="width: 1.3in;" />
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                  <td><strong>Phone number(s):</strong></td>
+                                  {{#with phone_numbers.[0]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[1]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[2]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                </tr>
+                                {{#if phone_numbers.[3]}}
+                                  <tr>
+                                    <td></td>
+                                    {{#with phone_numbers.[3]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                    {{#with phone_numbers.[4]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                    {{#with phone_numbers.[5]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                  </tr>
+                                {{/if}}
+                                {{#if phone_numbers.[6]}}
+                                <tr>
+                                  <td></td>
+                                  {{#with phone_numbers.[6]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[7]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[8]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                </tr>
+                                {{/if}}
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nest" colspan="5">
+                              <table class="attrRow">
+                                <colgroup>
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                </colgroup>
+                                <tr>
+                                  <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                                  <td>Lives With</td>
+                                  <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                                  <td>School Pick Up</td>
+                                  <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                                  <td>Emergency Contact</td>
+                                  <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                                  <td>Receives Mail</td>
+                                  <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                                  <td>Portal Access</td>
+                                </tr>
+                              </table>
+                              <table class="smopt">
+                                <colgroup>
+                                  <col style="width: 0.3in;" />
+                                  <col style="width: 2in;"/>
+                                  <col />
+                                </colgroup>
+                                <tr>
+                                  <td class="border"></td>
+                                  <td>School Messenger Opt-Out</td>
+                                  <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    {{/with}}
+                  {{/if}}
+                  {{#if contacts.[6]}}
+                  {{#with contacts.[6]}}
+                  <table class="contact">
+                    <colgroup>
+                      <col style="width: 1.3in;" />
+                      <col style="width: 1.95in;" />
+                      <col style="width: 1.75in;" />
+                      <col style="width: 1.75in;" />
+                      <col style="width: 1.15in" />
+                    </colgroup>
+                    <tbody class="contact">
+                        <tr>
+                          <td><strong>Contact name:</strong></td>
+                          <td>{{ last_name }}</td>
+                          <td>{{ first_name }}</td>
+                          <td><strong>Relationship to student:</strong></td>
+                          <td class="blank">{{ relationship }}</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="fieldnames">
+                            Last name
+                          </td>
+                          <td class="fieldnames">
+                            First name
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><strong>Email Address(es):</strong></td>
+                          <td colspan="4" class="blank">{{ emails }}</td>
+                        </tr>
+                        <tr>
+                          <td class="nest" colspan="5">
+                            <table class="phoneblock">
+                              <colgroup>
+                                <col style="width: 1.3in;" />
+                              </colgroup>
+                              <tbody>
+                              <tr>
+                                <td><strong>Phone number(s):</strong></td>
+                                {{#with phone_numbers.[0]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[1]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[2]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                              </tr>
+                              {{#if phone_numbers.[3]}}
+                                <tr>
+                                  <td></td>
+                                  {{#with phone_numbers.[3]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[4]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[5]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                </tr>
+                              {{/if}}
+                              {{#if phone_numbers.[6]}}
+                              <tr>
+                                <td></td>
+                                {{#with phone_numbers.[6]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[7]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[8]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{number}}</td>
+                                {{/with}}
+                              </tr>
+                              {{/if}}
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="nest" colspan="5">
+                            <table class="attrRow">
+                              <colgroup>
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                                <col style="width: 0.3in;" />
+                                <col />
+                              </colgroup>
+                              <tr>
+                                <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                                <td>Lives With</td>
+                                <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                                <td>School Pick Up</td>
+                                <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                                <td>Emergency Contact</td>
+                                <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                                <td>Receives Mail</td>
+                                <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                                <td>Portal Access</td>
+                              </tr>
+                            </table>
+                            <table class="smopt">
+                              <colgroup>
+                                <col style="width: 0.3in;" />
+                                <col style="width: 2in;"/>
+                                <col />
+                              </colgroup>
+                              <tr>
+                                <td class="border"></td>
+                                <td>School Messenger Opt-Out</td>
+                                <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  {{/with}}
+                {{/if}}
+                {{#if contacts.[7]}}
+                {{#with contacts.[7]}}
+                <table class="contact">
+                  <colgroup>
+                    <col style="width: 1.3in;" />
+                    <col style="width: 1.95in;" />
+                    <col style="width: 1.75in;" />
+                    <col style="width: 1.75in;" />
+                    <col style="width: 1.15in" />
+                  </colgroup>
+                  <tbody class="contact">
+                      <tr>
+                        <td><strong>Contact name:</strong></td>
+                        <td>{{ last_name }}</td>
+                        <td>{{ first_name }}</td>
+                        <td><strong>Relationship to student:</strong></td>
+                        <td class="blank">{{ relationship }}</td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td class="fieldnames">
+                          Last name
+                        </td>
+                        <td class="fieldnames">
+                          First name
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><strong>Email Address(es):</strong></td>
+                        <td colspan="4" class="blank">{{ emails }}</td>
+                      </tr>
+                      <tr>
+                        <td class="nest" colspan="5">
+                          <table class="phoneblock">
+                            <colgroup>
+                              <col style="width: 1.3in;" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                              <td><strong>Phone number(s):</strong></td>
+                              {{#with phone_numbers.[0]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[1]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[2]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                            </tr>
+                            {{#if phone_numbers.[3]}}
+                              <tr>
+                                <td></td>
+                                {{#with phone_numbers.[3]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[4]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                                {{#with phone_numbers.[5]}}
+                                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                  <td>{{ number }}</td>
+                                {{/with}}
+                              </tr>
+                            {{/if}}
+                            {{#if phone_numbers.[6]}}
+                            <tr>
+                              <td></td>
+                              {{#with phone_numbers.[6]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[7]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[8]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                            </tr>
+                            {{/if}}
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="nest" colspan="5">
+                          <table class="attrRow">
+                            <colgroup>
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                              <col style="width: 0.3in;" />
+                              <col />
+                            </colgroup>
+                            <tr>
+                              <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                              <td>Lives With</td>
+                              <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                              <td>School Pick Up</td>
+                              <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                              <td>Emergency Contact</td>
+                              <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                              <td>Receives Mail</td>
+                              <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                              <td>Portal Access</td>
+                            </tr>
+                          </table>
+                          <table class="smopt">
+                            <colgroup>
+                              <col style="width: 0.3in;" />
+                              <col style="width: 2in;"/>
+                              <col />
+                            </colgroup>
+                            <tr>
+                              <td class="border"></td>
+                              <td>School Messenger Opt-Out</td>
+                              <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                {{/with}}
+              {{/if}}
+              {{#if contacts.[8]}}
+              {{#with contacts.[8]}}
+              <table class="contact">
+                <colgroup>
+                  <col style="width: 1.3in;" />
+                  <col style="width: 1.95in;" />
+                  <col style="width: 1.75in;" />
+                  <col style="width: 1.75in;" />
+                  <col style="width: 1.15in" />
+                </colgroup>
+                <tbody class="contact">
+                    <tr>
+                      <td><strong>Contact name:</strong></td>
+                      <td>{{ last_name }}</td>
+                      <td>{{ first_name }}</td>
+                      <td><strong>Relationship to student:</strong></td>
+                      <td class="blank">{{ relationship }}</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td class="fieldnames">
+                        Last name
+                      </td>
+                      <td class="fieldnames">
+                        First name
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>Email Address(es):</strong></td>
+                      <td colspan="4" class="blank">{{ emails }}</td>
+                    </tr>
+                    <tr>
+                      <td class="nest" colspan="5">
+                        <table class="phoneblock">
+                          <colgroup>
+                            <col style="width: 1.3in;" />
+                          </colgroup>
+                          <tbody>
+                          <tr>
+                            <td><strong>Phone number(s):</strong></td>
+                            {{#with phone_numbers.[0]}}
+                              <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                              <td>{{ number }}</td>
+                            {{/with}}
+                            {{#with phone_numbers.[1]}}
+                              <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                              <td>{{ number }}</td>
+                            {{/with}}
+                            {{#with phone_numbers.[2]}}
+                              <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                              <td>{{ number }}</td>
+                            {{/with}}
+                          </tr>
+                          {{#if phone_numbers.[3]}}
+                            <tr>
+                              <td></td>
+                              {{#with phone_numbers.[3]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[4]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[5]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{ number }}</td>
+                              {{/with}}
+                            </tr>
+                          {{/if}}
+                          {{#if phone_numbers.[6]}}
+                            <tr>
+                              <td></td>
+                              {{#with phone_numbers.[6]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[7]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                              {{#with phone_numbers.[8]}}
+                                <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                <td>{{number}}</td>
+                              {{/with}}
+                            </tr>
+                          {{/if}}
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="nest" colspan="5">
+                        <table class="attrRow">
+                          <colgroup>
+                            <col style="width: 0.3in;" />
+                            <col />
+                            <col style="width: 0.3in;" />
+                            <col />
+                            <col style="width: 0.3in;" />
+                            <col />
+                            <col style="width: 0.3in;" />
+                            <col />
+                            <col style="width: 0.3in;" />
+                            <col />
+                          </colgroup>
+                          <tr>
+                            <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                            <td>Lives With</td>
+                            <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                            <td>School Pick Up</td>
+                            <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                            <td>Emergency Contact</td>
+                            <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                            <td>Receives Mail</td>
+                            <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                            <td>Portal Access</td>
+                          </tr>
+                            </table>
+                            <table class="smopt">
+                              <colgroup>
+                                <col style="width: 0.3in;" />
+                                <col style="width: 2in;"/>
+                                <col />
+                              </colgroup>
+                              <tr>
+                                <td class="border"></td>
+                                <td>School Messenger Opt-Out</td>
+                                <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  {{/with}}
+                {{/if}} 
+              </tbody>
+            </table>
+        </div>
+
+        <div class="page">
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+          {{#if contacts.[9]}}
+            <table class="border">
+              <thead>
+                <tr>
+                  <th colspan="5">Additional Contacts <span class="rightfloat thnote">To remove a contact, cross out the entire contact with an X</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="nest">
+                    {{#with contacts.[9]}}
+                    <table class="contact">
+                      <colgroup>
+                        <col style="width: 1.3in;" />
+                        <col style="width: 1.95in;" />
+                        <col style="width: 1.75in;" />
+                        <col style="width: 1.75in;" />
+                        <col style="width: 1.15in" />
+                      </colgroup>
+                      <tbody class="contact">
+                          <tr>
+                            <td><strong>Contact name:</strong></td>
+                            <td>{{ last_name }}</td>
+                            <td>{{ first_name }}</td>
+                            <td><strong>Relationship to student:</strong></td>
+                            <td class="blank">{{ relationship }}</td>
+                          </tr>
+                          <tr>
+                            <td></td>
+                            <td class="fieldnames">
+                              Last name
+                            </td>
+                            <td class="fieldnames">
+                              First name
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><strong>Email Address(es):</strong></td>
+                            <td colspan="4" class="blank">{{ emails }}</td>
+                          </tr>
+                          <tr>
+                            <td class="nest" colspan="5">
+                              <table class="phoneblock">
+                                <colgroup>
+                                  <col style="width: 1.3in;" />
+                                </colgroup>
+                                <tbody>
+                                <tr>
+                                  <td><strong>Phone number(s):</strong></td>
+                                  {{#with phone_numbers.[0]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[1]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[2]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{ number }}</td>
+                                  {{/with}}
+                                </tr>
+                                {{#if phone_numbers.[3]}}
+                                  <tr>
+                                    <td></td>
+                                    {{#with phone_numbers.[3]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                    {{#with phone_numbers.[4]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                    {{#with phone_numbers.[5]}}
+                                      <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                      <td>{{ number }}</td>
+                                    {{/with}}
+                                  </tr>
+                                {{/if}}
+                                {{#if phone_numbers.[6]}}
+                                <tr>
+                                  <td></td>
+                                  {{#with phone_numbers.[6]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[7]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                  {{#with phone_numbers.[8]}}
+                                    <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                                    <td>{{number}}</td>
+                                  {{/with}}
+                                </tr>
+                                {{/if}}
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nest" colspan="5">
+                              <table class="attrRow">
+                                <colgroup>
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                  <col style="width: 0.3in;" />
+                                  <col />
+                                </colgroup>
+                                <tr>
+                                  <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+                                  <td>Lives With</td>
+                                  <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+                                  <td>School Pick Up</td>
+                                  <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+                                  <td>Emergency Contact</td>
+                                  <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+                                  <td>Receives Mail</td>
+                                  <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+                                  <td>Portal Access</td>
+                                </tr>
+                              </table>
+                              <table class="smopt">
+                                <colgroup>
+                                  <col style="width: 0.3in;" />
+                                  <col style="width: 2in;"/>
+                                  <col />
+                                </colgroup>
+                                <tr>
+                                  <td class="border"></td>
+                                  <td>School Messenger Opt-Out</td>
+                                  <td class="smallnote nopadding">Schools flag some contacts to receive SchoolMessenger notifications via email, text message and/or phone call to student contacts. Check this box to opt out.</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    {{/with}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          {{/if}}
+          {{#if extended_alert_medical}}
+            <table class="border">
+              <thead>
+                <tr>
+                  <th>Extended Medical Alert</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{ extended_alert_medical }}</td>
+                </tr>
+              </tbody>
+            </table>  
+          {{/if}}
+          {{#if extended_medical_considerations }}
+            <table class="border">
+              <thead>
+                <tr>
+                  <th>Extended Medical Considerations</th>
+                </tr>
+              </thead>             
+              <tr>
+                <td>{{ extended_medical_considerations }}</td>
+              </tr>
+            </table>
+          {{/if}}
+        </div>
+        {{else}}
+          {{#if extended_alert_medical}}
+          <table class="border">
+            <thead>
+              <tr>
+                <th>Extended Medical Alert</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ extended_alert_medical }}</td>
+              </tr>
+            </tbody>
+          </table>  
+        {{/if}}
+        {{#if extended_medical_considerations }}
+          <table class="border">
+            <thead>
+              <tr>
+                <th>Extended Medical Considerations</th>
+              </tr>
+            </thead>             
+            <tr>
+              <td>{{ extended_medical_considerations }}</td>
+            </tr>
+          </table>
+        {{/if}} 
+        </div>
+        <div class="page">
+          &nbsp;
+        </div>
+      {{/if}}
+      {{/if}}
+{{/each}}

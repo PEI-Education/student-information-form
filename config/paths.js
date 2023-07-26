@@ -8,7 +8,7 @@ module.exports = {
   start: path.resolve(__dirname, '../dist'),
   
   // Production build files
-  build: path.resolve(__dirname, '../dist/WEB_ROOT/admin/pei_reportcards_v2'),
+  build: path.resolve(__dirname, '../dist/WEB_ROOT/admin/pei_reports'),
 
   // Static files that get copied to build folder
   json: path.resolve(__dirname, '../json'),
