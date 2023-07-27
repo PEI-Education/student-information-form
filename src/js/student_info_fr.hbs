@@ -1,6 +1,7 @@
 {{#each students}}
   <div class="page">
-        <h1>~[text:psx.htmlc.admin_pei_reports.student_info.title]</h1>
+        <h1>LA COMMISSION SCOLAIRE DE LANGUE FRANÇAISE</h1>
+        <h2>INFORMATIONS DE L'ÉLÈVE</h2>
         <table>
           <colgroup>
             <col style="width: 5.75in" />
@@ -8,14 +9,14 @@
           </colgroup>
           <tr>
             <td class="no-border">
-              <span class="note">Dear Parent/Guardian: Please review the following inormation and note any missing, corrected, or changed information next to the item. PLEASE RETURN THE COMPLETED AND SIGNED FORM TO THE SCHOOL AS SOON AS POSSIBLE.</span>
+              <span class="note">Cher parent/tuteur: Veuillez consulter les informations suivantes et noter toute information manquante. Corrigé ou modifié à côté de l'info au besoin. VEUILLEZ RETOURNER LE FORMULAIRE REMPLI ET SIGNÉ À L'ÉCOLE DÈS QUE POSSIBLE</span>
             </td>
             <td class="border">
-              Homeroom:
+              Classe titulaire :
               {{home_room}}<br />
-              Student Number:
+              No de l'élève :
               {{student_number}}<br />
-              Grade:
+              Niveau scolaire :
               {{grade_level}}
             </td>
           </tr>
@@ -30,13 +31,13 @@
           </colgroup>
           <thead>
             <tr>
-              <th colspan="5">Student Information</th>
+              <th colspan="5">Information de l'élève</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <strong>Common name:</strong>
+                <strong>Nom :</strong>
               </td>
               <td colspan="2">{{last_name}}</td>
               <td>{{first_name}}</td>
@@ -44,13 +45,13 @@
             </tr>
             <tr>
               <td></td>
-              <td colspan="2" class="fieldnames">Last</td>
-              <td class="fieldnames">First</td>
-              <td class="fieldnames">Middle</td>
+              <td colspan="2" class="fieldnames">Nom de famille</td>
+              <td class="fieldnames">Prénom</td>
+              <td class="fieldnames">Second prénom</td>
             </tr>
             <tr>
               <td>
-                <strong>Full legal name:</strong>
+                <strong>Nom officiel :</strong>
               </td>
               <td colspan="2">{{legal_last_name}}</td>
               <td>{{legal_first_name}}</td>
@@ -58,9 +59,9 @@
             </tr>
             <tr>
               <td></td>
-              <td colspan="2" class="fieldnames">Last</td>
-              <td class="fieldnames">First</td>
-              <td class="fieldnames">Middle</td>
+              <td colspan="2" class="fieldnames">Nom de famille</td>
+              <td class="fieldnames">Prénom</td>
+              <td class="fieldnames">Second prénom</td>
             </tr>
             <tr>
               <td class="nest" colspan="5">
@@ -80,20 +81,20 @@
                   </colgroup>
                   <tr>
                     <td>
-                      <strong>Date of birth:</strong>
+                      <strong>Naissance :</strong>
                     </td>
                     <td>{{dob}}</td>
                     <td class="center">
-                      <strong>Gender:</strong>
+                      <strong>Gendre :</strong>
                     </td>
                     <td class="border center">{{#if genderF}}<i class="fi-x"></i>{{/if}}</td>
-                    <td>Female</td>
+                    <td>Fille</td>
                     <td class="border center">{{#if genderM}}<i class="fi-x"></i>{{/if}}</td>
-                    <td>Male</td>
+                    <td>Garçon</td>
                     <td class="border center">{{#if genderU}}<i class="fi-x"></i>{{/if}}</td>
-                    <td>Undisclosed</td>
+                    <td>Non identifié</td>
                     <td class="border center">{{#if genderX}}<i class="fi-x"></i>{{/if}}</td>
-                    <td>Identify another way</td>
+                    <td>S'identifie autrement</td>
                   </tr>
                   <tr>
                     <td class=""></td>
@@ -104,7 +105,7 @@
             </tr>
             <tr>
               <td colspan="3">
-                <strong>List any siblings the student has at this school:</strong>
+                <strong>Indiquer si l'élève à des frêres et soeurs à cette école :</strong>
               </td>
               <td colspan="2" class="blank">&nbsp;</td>
             </tr>
@@ -120,37 +121,35 @@
           </colgroup>
           <thead>
             <tr>
-              <th colspan="5">Student Demographics
-                <span class="rightfloat thnote">Student contacts on reverse</span>
+              <th colspan="5">Information démographique
+                <span class="rightfloat thnote">Information des contacts au verso</span>
               </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <strong>Home address:</strong>
+                <strong>Adresse de l'élève :</strong>
               </td>
               <td colspan="4" class="blank">{{ home_address }}</td>
             </tr>
       		  <tr>
               <td>
-                <strong>Home phone:</strong>
+                <strong>Téléphone à la maison : </strong>
               </td>
               <td colspan="4" class="blank">{{ home_phone }}</td>
             </tr>
             <tr>
-              <td colspan="5" class="smallnote">
-                Alternate student addresses are list below. If the student has an alternate address, please indicate the address and the type. <br>
-                Examples of address types include: Home1 (alternate home, i.e. lives with both parents, separately), After School, Before School, Before and After School and Emergency Closure.<br>
-                <span class="smallnote bold">To update one of the alternate addresses, cross out the address and list the new one in a blank space.</span>
+              <td colspan="5" class="smallnote">Les adresses alternatives des élèves sont listées ci-dessous.<br>
+                <span class="smallnote bold"> Si l'élève a une autre adresse, veuillez indiquer l'adresse et le type.</span>
               </td>
             </tr>
           </tbody>
           <thead>
             <tr>
-              <th class="border">Address Type</th>
-              <th class="border">Address Label</th>
-              <th colspan="3" class="border">Address</th>
+              <th class="border">Type d'adresse</th>
+              <th class="border">Étiquette</th>
+              <th colspan="3" class="border">Adresse</th>
             </tr>
           </thead>
           <tbody>
@@ -172,17 +171,17 @@
             </tr>
             {{/if}}
             <tr>
-              <td><strong>Student Lives With:</strong></td>
+              <td><strong>L'élève habite avec :</strong></td>
               <td class="blank" colspan="4">{{ guardianship }}</td>
             </tr>
-              <td colspan="2"><strong>Access to high speed internet at home?</strong></td>
+              <td colspan="2"><strong>Accès à Internet à la maison ?</strong></td>
               <td class="blank">{{ has_internet }}</td>
-              <td><strong>Access to a computer/Chromebook/tablet?</strong></td>
+              <td><strong>Accès à un ordinateur/Chromebook/tablette ?</strong></td>
               <td class="blank">{{ has_device }}</td>
             </tr>
             <tr>
               <td class="smallnote" colspan="52">
-                The information is recorded each year. Y## = Yes as of the year indicated and N## = No as of the year indicated. E.g. N21 = No, Y21 = Yes
+                Les informations sont enregistrées chaque année. Y## = Oui à partir de l'année indiquée et N## = Non à partir de l'année indiquée. Par exemple, N21 = Non, Y21 = Oui.
               </td>
             </tr>
           </tbody>
@@ -196,31 +195,31 @@
           </colgroup>
           <thead>
             <tr>
-              <th colspan="4">Student Health Information</th>
+              <th colspan="4">Information sur la santé</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                <strong>Student has a life-threatening allergy:</strong>
+                <strong>L'élève a une allergie potentiellememt mortelle :</strong>
               </td>
               <td class="blank">{{ life_threatening_allergy }}</td>
-              <td><strong>Health Concerns:</strong></td>
+              <td><strong>Problèmes de santé :</strong></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
-              <td><strong>Student requires an Epi-Pen for use at school: </strong></td>
+              <td><strong>L'élève a besoin d'un Epi-Pen :</strong></td>
               <td class="blank">{{ epipen }}</td>
-              <td><strong>Medications:</strong></td>
+              <td><strong>Médicaments :</strong></td>
               <td>&nbsp;</td>
             </tr>
             <tr>
               <td colspan="2" class="top">
-                <strong>Substance(s) which cause life-threatening allergy	or medical condition:</strong>
+                <strong>Substance(s) provoquant une allergie potentiellement mortelle :</strong>
               </td>
               <td colspan="2" class="top">
-                <strong>Special Medical Considerations</strong><br>
-                <span class="smallnote">(for non-life-threatening conditions, i.e. wears eyeglasses, frequent nosebleeds, etc.)</span>
+                <strong>Considérations médicales spéciales :</strong><br>
+                <span class="smallnote">(pour des problèmes ne mettant pas la vie en danger, comme porter des lunettes, des saignements de nez fréquents, etc.)</span>
               </td>
             </tr>
             <tr>
@@ -237,14 +236,14 @@
           </colgroup>
           <thead>
             <tr>
-              <th colspan="3">Indigenous Persons Self-Identification (optional)</th>
+              <th colspan="3">Auto-identification des Autochtones (optionnel)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>Student is currently recorded as:</strong></td>
+              <td><strong>L'élève est présentement inscrit comme :</strong></td>
               <td class="blank">{{ indigenous }}</td>
-              <td class="italic">Respond below if this information is no longer correct.</td>
+              <td class="italic">Si cette information n'est plus pertinante, veuillez répondre en bas.</td>
             </tr>
             <tr>
               <td class="nest" colspan="3">
@@ -257,12 +256,11 @@
                     <col style="width: 0.7in;" />
                   </colgroup>
                   <tr>
-                    <td><strong>Does the student identify as an Indigenous person; that is, First Nation,
-                      Metis, or Inuk (Inuit)?</strong></td>
+                    <td><strong>L'élève s'identifie-t-il en tant qu'Autochtone ? C'est-à-dire Première Nation, Métis ou Inuk (Inuit)?</strong></td>
                     <td class="border"></td>
-                    <td>Yes</td>
+                    <td>Oui</td>
                     <td class="border"></td>
-                    <td>No</td>
+                    <td>Non</td>
                   </tr>
                 </table>
               </td>
@@ -278,16 +276,16 @@
                     <col style="width: 2.2sin;" />
                   </colgroup>
                   <tr>
-                    <td><strong>If Yes,</strong> which best describes the student?</td>
+                    <td><strong>Si oui,</strong> qu'est-ce qui décrit le mieux? </td>
                     <td class="border"></td>
-                    <td>First Nations - living on reserve</td>
+                    <td>Premières Nations (sur une réserve)</td>
                     <td class="border"></td>
                     <td>Inuk (Inuit)</td>
                   </tr>
                   <tr style="padding-bottom: 0.05in;">
                     <td class="final"></td>
                     <td class="border final"></td>
-                    <td class="final">First Nations - living off reserve</td>
+                    <td class="final">Premières Nations (hors réserve)</td>
                     <td class="border final"></td>
                     <td>Métis</td>
                   </tr>
@@ -299,17 +297,17 @@
       </div>
       <hr class="noprint pagebreak" />
       <div class="page">
-        <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+        <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
         <table class="border">
           <thead>
             <tr>
-              <th>Transportation</th>
+              <th>Transport scolaire</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
-                Transportation is managed through BusPlanner (<span class="link">https://psbbusing.princeedwardisland.ca/Login</span>). Please log into your BusPlanner account to view your student's transportation arrangements. If there are changes to be made, please contact your school. If you require further information or clarification, please contact Transportation Services at 902.368.6990 or 1.800.280.7965 toll free.
+                Le transport scolaire est géré par la Commission scolaire de langue française. Veuillez communiquer avec l'école pour un changement d'adresse ou avec la CSLF pour plus d'information ou de clarification au 902-854-2975.
               </td>
             </tr>
           </tbody>
@@ -317,35 +315,35 @@
         <table class="border">
           <thead>
             <tr>
-              <th colspan="5">Student Contacts <span class="rightfloat thnote">To remove a contact, cross out the entire contact with an X</span></th>
+              <th colspan="5">Information des contacts <span class="rightfloat thnote">Pour supprimer un contact, barrez-le entièrement d'un X</span></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="nest">
                 {{#with contacts.[0]}}
-                  {{> contact }}
+                  {{> contact_fr}}
                 {{/with}}
                 {{#if contacts.[1]}}
                   {{#with contacts.[1]}}
-                    {{> contact }}
+                    {{> contact_fr}}
                   {{/with}}
                 {{/if}}
                 {{#if contacts.[2]}}
                   {{#with contacts.[2]}}
-                    {{> contact }}
+                    {{> contact_fr}}
                   {{/with}}
                 {{/if}}
                 {{#if contacts.[3]}}
                   {{#with contacts.[3]}}
-                    {{> contact }}
+                    {{> contact_fr}}
                   {{/with}}
                 {{/if}}
               </td>
             </tr>
             {{#if contacts.[4]}}
               <tr>
-                <td class="center"><strong>See next page for additional contacts.</strong></td>
+                <td class="center"><strong>Voir page suivante pour des contacts supplémentaires.</strong></td>
               </tr>
             {{/if}}
           </tbody>
@@ -354,13 +352,13 @@
           <table class="border">
             <thead>
               <tr>
-                <td>Acknowledgement</td>
+                <td>Renseignements personnels</td>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  Personal information on this form is collected under section 5B of the Education Act and section 31(c) of the FOIPP Act as it relates directly to and is necessary for providing services to students of the Public Schools Branch. If you have questions about this collection of information, you may contact the Public Schools Branch by telephone at 902.368.6990, 902.888.8400, or toll free at 1.800.280.7965.
+                  Les renseignements personnels sur ce formulaire sont recueillis en vertu de l'article 5B de la Loi sur l'éducation et de l'article 31(c) de la FOIPP Act en ce qui concerne directement et est nécessaire pour fournir des services aux élèves de la Commission scolaire de langue française. Si vous avez des questions sur cette collecte d'informations, vous pouvez contacter la CSLF par téléphone au 902-854-2975.
                 </td>
               </tr>
             </tbody>
@@ -373,9 +371,9 @@
               <col style="width: 1in;" />
             </colgroup>
             <tr>
-              <td class="sigline">Signature of Legal Guardian, Custodial Parent or Custodian: </td>
+              <td class="sigline">Signature du parent ou du tuteur légal : </td>
               <td class="blank"></td>
-              <td class="sigline">Date:</td>
+              <td class="sigline">Date :</td>
               <td class="blank"></td>
             </tr>
           </table>
@@ -385,38 +383,38 @@
 <!-- Supplemental pages -->
       {{#if supplemental_required}}
         <div class="page">
-          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
           {{#if contacts.[4]}}
             <table class="border">
               <thead>
                 <tr>
-                  <th>Additional Contacts <span class="rightfloat thnote">To remove a contact, cross out the entire contact with an X</span></th>
+                  <th>Contacts supplémentaires <span class="rightfloat thnote">Pour supprimer un contact, barrez-le entièrement d'un X</span></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="nest">
                     {{#with contacts.[4]}}
-                      {{> contact }}
+                      {{> contact_fr}}
                     {{/with}}
                     {{#if contacts.[5]}}
                       {{#with contacts.[5]}}
-                        {{> contact }}
+                        {{> contact_fr}}
                       {{/with}}
                     {{/if}}
                     {{#if contacts.[6]}}
                       {{#with contacts.[6]}}
-                        {{> contact }}
+                        {{> contact_fr}}
                       {{/with}}
                     {{/if}}
                     {{#if contacts.[7]}}
                       {{#with contacts.[7]}}
-                        {{> contact }}
+                        {{> contact_fr}}
                       {{/with}}
                     {{/if}}
                     {{#if contacts.[8]}}
                       {{#with contacts.[8]}}
-                        {{> contact }}
+                        {{> contact_fr}}
                       {{/with}}
                     {{/if}} 
                   </tbody>
@@ -424,15 +422,15 @@
             </div>
       <hr class="noprint pagebreak" />
         <div class="page">
-          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
           {{#if contacts.[9]}}
-            {{> contact }}
+            {{> contact_fr}}
           {{/if}}
           {{#if extended_alert_medical}}
             <table class="border">
               <thead>
                 <tr>
-                  <th>Extended Medical Alert</th>
+                  <th>Alerte médicale prolongée</th>
                 </tr>
               </thead>
               <tbody>
@@ -446,7 +444,7 @@
             <table class="border">
               <thead>
                 <tr>
-                  <th>Extended Medical Considerations</th>
+                  <th>Considérations médicales prolongées</th>
                 </tr>
               </thead>             
               <tr>
@@ -460,7 +458,7 @@
           <table class="border">
             <thead>
               <tr>
-                <th>Extended Medical Alert</th>
+                <th>Alerte médicale prolongée</th>
               </tr>
             </thead>
             <tbody>
@@ -474,7 +472,7 @@
           <table class="border">
             <thead>
               <tr>
-                <th>Extended Medical Considerations</th>
+                <th>Considérations médicales prolongées</th>
               </tr>
             </thead>             
             <tr>
@@ -484,7 +482,7 @@
         {{/if}} 
         </div>
         <div class="page">
-          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
         </div>
       {{/if}}
   {{/if}}
