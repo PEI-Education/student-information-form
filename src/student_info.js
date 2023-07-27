@@ -1,5 +1,5 @@
-import './styles/spinner.css';
-import './styles/student_info.css';
+import './css/spinner.css';
+import './css/student_info.css';
 
 const template = require('./js/student_info.hbs')
 
@@ -25,7 +25,6 @@ const fadeOutEffect = () => {
 }
 
 const process = (students) => {
-   console.log(students)
 
    students.forEach((student) => {
       if (student.alert_medical.length > 300) {
@@ -55,20 +54,19 @@ const process = (students) => {
        if (student.contacts.length > 4) {
          student.supplemental_required = true;
        }
-
-       console.log(student)
    });
  
+    return students;
  };
 
 const populate = async (url) => {
 
    const response = await fetch(url)
    const results = await response.json()
-   const processedStudents = process(results)
-   console.log('results returned and processed')
+   const students = process(results)
+   const outputData = {students: students}
    const container = document.getElementById('output')
-   container.innerHTML = template(processedStudents)
+   container.innerHTML = template(outputData)
    const overlay = document.getElementById('overlay') 
    fadeOutEffect()
    overlay.remove()

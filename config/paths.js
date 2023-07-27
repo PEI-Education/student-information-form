@@ -20,5 +20,8 @@ module.exports = {
   prefs: path.resolve(__dirname,  '../prefs'),
 
   // Handlebars helpers
-  helpers: path.resolve(__dirname, '../src/helpers')
+  helpers: path.resolve(__dirname, '../src/helpers'),
+
+  // Handlebars partials
+  partials: path.resolve(__dirname, '../src/partials')
 }

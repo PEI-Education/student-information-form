@@ -67,7 +67,7 @@ module.exports = merge(common, {
     }),
     // Extracts CSS into separate files
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
+      filename: 'css/[name].[contenthash].css',
       chunkFilename: '[id].[contenthash].css',
     }),
   ],

@@ -44,7 +44,8 @@ module.exports = {
           loader: "handlebars-loader",
           options: {
             inlineRequire: "/json/",
-            helperDirs: paths.helpers
+            helperDirs: paths.helpers,
+            partialDirs: paths.partials,
           }
         }
       ]}

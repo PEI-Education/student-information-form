@@ -9,6 +9,12 @@
    font-size: 9pt;
 }
 
+@media print {
+   .noprint {
+      display: none;
+   }
+}
+
 .page {
    display: block;
    position: relative;
@@ -57,6 +63,10 @@ thead {
 
 .brokenborder {
    border: 1px dashed black 
+}
+
+.pagebreak {
+   border-top: 2px dotted black;
 }
 
 .fieldnames {
