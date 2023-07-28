@@ -142,11 +142,16 @@ thead {
 /* Heading/warning styles */
 h1, h2 {
    text-align: center;
+   margin-bottom: 0.05in;
 }
 
 h1 {
    font-size: 2em;
    margin-bottom: 0.05in;
+}
+
+h2 {
+   font-size: 1.6em;
 }
 
 .note {

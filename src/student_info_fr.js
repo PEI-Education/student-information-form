@@ -5,7 +5,7 @@ const template = require('./js/student_info_fr.hbs')
 
 // You need to comment out one of the following lines to switch between real data and test data
 /* Real data */ 
-const dataSource = `./json/student_info.json?dothisfor=${reportconfig.dothisfor}`
+const dataSource = `./json/student_info_fr.json?dothisfor=${reportconfig.dothisfor}`
 
 /* Test data */
 //const dataSource = `./json/test_data.json` //Tesst data

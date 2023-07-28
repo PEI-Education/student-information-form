@@ -48,7 +48,7 @@
                when 'I' then 'Inuk (Inuit)'
                when 'M' then 'Métis'
                when 'R' then 'Premières Nations (sur une réserve)'
-            else 'Ne s'identifie pas comme autochtone' end as indigenous,
+            else 'Ne s''identifie pas comme autochtone' end as indigenous,
             case scf.guardianship
                when 'M' then 'Mère'
                when 'F' then 'Père'
