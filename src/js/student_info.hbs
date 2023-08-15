@@ -8,7 +8,7 @@
           </colgroup>
           <tr>
             <td class="no-border">
-              <span class="note">Dear Parent/Guardian: Please review the following inormation and note any missing, corrected, or changed information next to the item. PLEASE RETURN THE COMPLETED AND SIGNED FORM TO THE SCHOOL AS SOON AS POSSIBLE.</span>
+              <span class="note">Dear Parent/Guardian: Please review the following information and note any missing, corrected, or changed information next to the item. PLEASE RETURN THE COMPLETED AND SIGNED FORM TO THE SCHOOL AS SOON AS POSSIBLE.</span>
             </td>
             <td class="border">
               Homeroom:
@@ -140,7 +140,7 @@
             </tr>
             <tr>
               <td colspan="5" class="smallnote">
-                Alternate student addresses are list below. If the student has an alternate address, please indicate the address and the type. <br>
+                Alternate student addresses are listed below. If the student has an alternate address, please indicate the address and the type. <br>
                 Examples of address types include: Home1 (alternate home, i.e. lives with both parents, separately), After School, Before School, Before and After School and Emergency Closure.<br>
                 <span class="smallnote bold">To update one of the alternate addresses, cross out the address and list the new one in a blank space.</span>
               </td>
@@ -419,16 +419,46 @@
                         {{> contact }}
                       {{/with}}
                     {{/if}} 
-                  </tbody>
-                </table>
-            </div>
-      <hr class="noprint pagebreak" />
-        <div class="page">
-          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
-          {{#if contacts.[9]}}
-            {{> contact }}
-          {{/if}}
-          {{#if extended_alert_medical}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="noprint pagebreak" />
+          <div class="page">
+            <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
+            {{#if contacts.[9]}}
+              {{> contact }}
+            {{/if}}
+            {{#if extended_alert_medical}}
+              <table class="border">
+                <thead>
+                  <tr>
+                    <th>Extended Medical Alert</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{{{ extended_alert_medical }}}</td>
+                  </tr>
+                </tbody>
+              </table>  
+            {{/if}}
+            {{#if extended_medical_considerations }}
+              <table class="border">
+                <thead>
+                  <tr>
+                    <th>Extended Medical Considerations</th>
+                  </tr>
+                </thead>             
+                <tr>
+                  <td>{{{ extended_medical_considerations }}}</td>
+                </tr>
+              </table>
+            {{/if}}
+          </div>
+          {{else}}
+            {{#if extended_alert_medical}}
             <table class="border">
               <thead>
                 <tr>
@@ -453,35 +483,7 @@
                 <td>{{{ extended_medical_considerations }}}</td>
               </tr>
             </table>
-          {{/if}}
-        </div>
-        {{else}}
-          {{#if extended_alert_medical}}
-          <table class="border">
-            <thead>
-              <tr>
-                <th>Extended Medical Alert</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{{{ extended_alert_medical }}}</td>
-              </tr>
-            </tbody>
-          </table>  
-        {{/if}}
-        {{#if extended_medical_considerations }}
-          <table class="border">
-            <thead>
-              <tr>
-                <th>Extended Medical Considerations</th>
-              </tr>
-            </thead>             
-            <tr>
-              <td>{{{ extended_medical_considerations }}}</td>
-            </tr>
-          </table>
-        {{/if}} 
+          {{/if}} 
         </div>
         <div class="page">
           <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Grade: {{ grade_level }}</span></div>
