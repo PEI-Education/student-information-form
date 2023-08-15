@@ -43,7 +43,7 @@
             CAST(s.alert_medical as varchar2(4000)) alert_medical,
             scf.medical_considerations,
             case def.pei_indigenous
-               when 'A' then 'Indigenous Person - no detail'
+               when 'A' then 'Indigeous Person - no detail'
                when 'F' then 'First Nations - living off reserve'
                when 'I' then 'Inuk (Inuit)'
                when 'M' then 'Métis'
