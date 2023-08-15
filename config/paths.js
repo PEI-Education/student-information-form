@@ -23,8 +23,5 @@ module.exports = {
   helpers: path.resolve(__dirname, '../src/helpers'),
 
   // Handlebars partials
-  partials: path.resolve(__dirname, '../src/partials'),
-
-  // Translations
-  messageKeys: path.resolve(__dirname, '../MessageKeys'),
+  partials: path.resolve(__dirname, '../src/partials')
 }
