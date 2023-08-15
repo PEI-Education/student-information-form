@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>~[text:psx.htmlc.admin_pei_reports.student_info.report_title]</title>
+  <title>Student Information Form</title>
   <link rel="stylesheet" type="text/css" href="css/foundation-icons.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,16 @@
 </head>
 <body>
    <!-- Loading spinner -->
-  <div id="overlay">
-    <div class="spinner"></div>
-    <br/>
-    Loading...
-  </div>
-  <!-- -->
-  <div class="noprint" style="font-size: 12px; color: red; width: 8in; padding: 5px; margin: 0.25in;">
+   <div id="overlay">
+     <div class="spinner"></div>
+     <br/>
+     Loading...
+   </div>
+   <!-- -->
+   <div class="noprint" style="font-size: 12px; color: red; width: 8in; padding: 5px; margin: 0.25in;">
     <h2>Instructions</h2>
     <p>The text in red will not print when you print your printed reports.</p>
+    </p>
     <br>
     <p><strong>~[text:psx.html.admin_reports.studschedmatrix.tips_for_printing]</strong></p>
     <ol class="text">
@@ -35,7 +36,10 @@
     </ol>
     <br>
     <p>~[text:psx.html.admin_reports.studschedmatrix.also_note_that_this_report_has_been_opened_in_a_new_window__]</p>
-  </div>
+    <p>Due to the number of contacts or long text in certain data fields, the report will print on 2 sheets (4 pages) of paper for the following students - please ensure they receive both:</p>
+    <ul id="twosheets">
+    </ul>
+</div>
    <div id="output"></div>
  </body>
 </html>
