@@ -26,37 +26,37 @@
             pei.pei_altaddress1addresstype,
             pei.pei_altaddress1label,
             case when pei.pei_altaddress1apt is null then '' else (pei.pei_altaddress1apt || '-') end alt1apartment,
-            case when pei.pei_altaddress1streetname is null then '' else (pei.pei_altaddress1streetnum || ' ' || pei.pei_altaddress1streetname || ', ' || nvl(pei.pei_altaddress1municipality, s.city) || ', PE  ' || pei.pei_altaddress1postalcode) end alt1address,
+            case when pei.pei_altaddress1streetname is null then '' else (pei.pei_altaddress1streetnum || ' ' || pei.pei_altaddress1streetname || ', ' || nvl(pei.pei_altaddress1municipality, s.city) || ', I-P-É  ' || pei.pei_altaddress1postalcode) end alt1address,
             pei.pei_altaddress2addresstype,
             pei.pei_altaddress2label,
             case when pei.pei_altaddress2apt is null then '' else (pei.pei_altaddress2apt || '-') end alt2apartment,
-            case when pei.pei_altaddress2streetname is null then '' else (pei.pei_altaddress2streetnum || ' ' || pei.pei_altaddress2streetname || ', ' || nvl(pei.pei_altaddress2municipality, s.city) || ', PE  ' || pei.pei_altaddress2postalcode) end alt2address,
+            case when pei.pei_altaddress2streetname is null then '' else (pei.pei_altaddress2streetnum || ' ' || pei.pei_altaddress2streetname || ', ' || nvl(pei.pei_altaddress2municipality, s.city) || ', I-P-É  ' || pei.pei_altaddress2postalcode) end alt2address,
             CASE 
-               when scf.allergies = 'EPIY' then 'Yes'
-               when scf.allergies = 'EPIN' then 'Yes'
-               else 'No'
+               when scf.allergies = 'EPIY' then 'Oui'
+               when scf.allergies = 'EPIN' then 'Oui'
+               else 'Non'
             end as life_threatening_allergy,
             CASE
-               when scf.allergies = 'EPIY' then 'Yes'
-               else 'No'
+               when scf.allergies = 'EPIY' then 'Oui'
+               else 'Non'
             end as epipen,
             CAST(s.alert_medical as varchar2(4000)) alert_medical,
             scf.medical_considerations,
             case def.pei_indigenous
-               when 'A' then 'Indigenous Person - no detail'
-               when 'F' then 'First Nations - living off reserve'
+               when 'A' then 'Personne autochtone - aucune précision'
+               when 'F' then 'Premières Nations (hors réserve)'
                when 'I' then 'Inuk (Inuit)'
                when 'M' then 'Métis'
-               when 'R' then 'First Nations, living on reserve'
-            else 'Does not identify as indigenous' end as indigenous,
+               when 'R' then 'Premières Nations (sur une réserve)'
+            else 'Ne s''identifie pas comme autochtone' end as indigenous,
             case scf.guardianship
-               when 'M' then 'Mother'
-               when 'F' then 'Father'
-               when 'LG' then 'Guardian'
-               when 'H' then 'Host'
-               when 'PT' then 'Parents Together'
-               when 'PS' then 'Parents Separately'
-               when 'I' then 'Independent'
+               when 'M' then 'Mère'
+               when 'F' then 'Père'
+               when 'LG' then 'Tuteur'
+               when 'H' then 'Hôte'
+               when 'PT' then 'Les parents ensemble'
+               when 'PS' then 'Parents séparés'
+               when 'I' then 'Indépendants'
             end as guardianship,
             def.pei_hasinternet,
             def.pei_hasdevice

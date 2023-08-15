@@ -62,6 +62,14 @@ module.exports = merge(common, {
           },
           noErrorOnMissing: true,          
         },
+        {
+          from: paths.messageKeys,
+          to: '../../../MessageKeys',
+          globOptions: {
+            ignore: ['*.DS_Store'],
+          },
+          noErrorOnMissing: true,
+        }
       ],    
 
     }),

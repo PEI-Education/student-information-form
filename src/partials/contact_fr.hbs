@@ -1,0 +1,132 @@
+<table class="contact">
+   <colgroup>
+      <col style="width: 1.3in;" />
+      <col style="width: 1.75in;" />
+      <col style="width: 1.75in;" />
+      <col style="width: 1.75in;" />
+      <col style="width: 1.15in" />
+   </colgroup>
+   <tbody class="contact">
+         <tr>
+         <td><strong>Nom du contact :</strong></td>
+         <td>{{{ last_name }}}</td>
+         <td>{{{ first_name }}}</td>
+         <td><strong>Lien avec l'élève :</strong></td>
+         <td class="blank">{{ relationship }}</td>
+         </tr>
+         <tr>
+         <td></td>
+         <td class="fieldnames">
+            Nom de famille
+         </td>
+         <td class="fieldnames">
+            Prénom         
+         </td>
+         </tr>
+         <tr>
+         <td><strong>Addresse(s) courriel :</strong></td>
+         <td colspan="4" class="blank">{{ emails }}</td>
+         </tr>
+         <tr>
+         <td class="nest" colspan="5">
+            <table class="phoneblock">
+               <colgroup>
+               <col style="width: 1.3in;" />
+               </colgroup>
+               <tbody>
+               <tr>
+               <td><strong>Téléphone :</strong></td>
+               {{#with phone_numbers.[0]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{ number }}</td>
+               {{/with}}
+               {{#with phone_numbers.[1]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{ number }}</td>
+               {{/with}}
+               {{#with phone_numbers.[2]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{ number }}</td>
+               {{/with}}
+               </tr>
+               <tr>
+               <td class="smallnote"><i class="fi-check"> = préféré</i></td>
+               {{#if phone_numbers.[3]}}
+               {{#with phone_numbers.[3]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{ number }}</td>
+               {{/with}}
+               {{/if}}
+               {{#with phone_numbers.[4]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{ number }}</td>
+               {{/with}}
+               {{#with phone_numbers.[5]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{ number }}</td>
+               {{/with}}
+               </tr>
+               {{#if phone_numbers.[6]}}
+               <tr>
+               <td></td>
+               {{#with phone_numbers.[6]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{number}}</td>
+               {{/with}}
+               {{#with phone_numbers.[7]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{number}}</td>
+               {{/with}}
+               {{#with phone_numbers.[8]}}
+                  <td>{{#if is_preferred}}<i class="fi-check"></i> {{/if}}{{ type }}</td>
+                  <td>{{number}}</td>
+               {{/with}}
+               </tr>
+               {{/if}}
+               </tbody>
+            </table>
+         </td>
+         </tr>
+         <tr>
+         <td class="nest" colspan="5">
+            <table class="attrRow">
+               <colgroup>
+               <col style="width: 0.3in;" />
+               <col />
+               <col style="width: 0.3in;" />
+               <col />
+               <col style="width: 0.3in;" />
+               <col />
+               <col style="width: 0.3in;" />
+               <col />
+               <col style="width: 0.3in;" />
+               <col />
+               </colgroup>
+               <tr>
+               <td class="border center">{{#if lives_with}}<i class="fi-x">{{/if}}</i></td>
+               <td>Habite avec</td>
+               <td class="border center">{{#if school_pickup}}<i class="fi-x">{{/if}}</td>
+               <td>Ramassage scolaire</td>
+               <td class="border center">{{#if is_emergency}}<i class="fi-x">{{/if}}</td>
+               <td>Contact d'urgence</td>
+               <td class="border center">{{#if receives_mail}}<i class="fi-x">{{/if}}</td>
+               <td>Reçoit le courrier</td>
+               <td class="border center">{{#if allow_data_access}}<i class="fi-x">{{/if}}</td>
+               <td>Accès portail</td>
+               </tr>
+            </table>
+            <table class="smopt">
+               <colgroup>
+                  <col style="width: 0.3in;" />
+                  <col style="width: 2in;"/>
+               </colgroup>
+               <tr>
+               <td class="border"></td>
+               <td>Option de retrait du service SchoolMessenger</td>
+               <td class="smallnote nopadding">Les écoles marquent certains contacts pour qu'ils reçoivent des notifications de SchoolMessenger par courriel, message texte et/ou appel téléphonique aux contacts des élèves. Cochez cette case pour vous désinscrire.</td>
+               </tr>
+            </table>
+         </td>
+         </tr>
+      </tbody>
+   </table>
