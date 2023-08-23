@@ -1,0 +1,488 @@
+{{#each students}}
+  <div class="page">
+        <h1>LA COMMISSION SCOLAIRE DE LANGUE FRANÇAISE</h1>
+        <h2>INFORMATIONS DE L'ÉLÈVE</h2>
+        <table>
+          <colgroup>
+            <col style="width: 5.75in" />
+            <col style="width: 2.25in" />
+          </colgroup>
+          <tr>
+            <td class="no-border">
+              <span class="note">Cher parent/tuteur: Veuillez consulter les informations suivantes et noter toute information manquante. Apportez des modifications à côté de l'info au besoin. VEUILLEZ RETOURNER LE FORMULAIRE REMPLI ET SIGNÉ À L'ÉCOLE DÈS QUE POSSIBLE</span>
+            </td>
+            <td class="border">
+              Classe titulaire :
+              {{home_room}}<br />
+              No de l'élève :
+              {{student_number}}<br />
+              Niveau scolaire :
+              {{grade_level}}
+            </td>
+          </tr>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 1.25in;" />
+            <col style="width: 1.25in;" />
+            <col style="width: 1in" />
+            <col style="width: 2.25in;" />
+            <col style="width: 2.25in;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="5">Information de l'élève</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Nom :</strong>
+              </td>
+              <td colspan="2">{{last_name}}</td>
+              <td>{{first_name}}</td>
+              <td>{{middle_name}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2" class="fieldnames">Nom de famille</td>
+              <td class="fieldnames">Prénom</td>
+              <td class="fieldnames">Deuxième prénom</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>Nom officiel :</strong>
+              </td>
+              <td colspan="2">{{legal_last_name}}</td>
+              <td>{{legal_first_name}}</td>
+              <td>{{legal_middle_name}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td colspan="2" class="fieldnames">Nom de famille</td>
+              <td class="fieldnames">Prénom</td>
+              <td class="fieldnames">Deuxième prénom</td>
+            </tr>
+            <tr>
+              <td class="nest" colspan="5">
+                <table class="nestedtoponly">
+                  <colgroup>
+                    <col style="width: 1.25in;" />
+                    <col style="width: 1in;" />
+                    <col style="width: 1in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 1in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 1.4in;" />
+                  </colgroup>
+                  <tr>
+                    <td>
+                      <strong>Naissance :</strong>
+                    </td>
+                    <td>{{dob}}</td>
+                    <td class="center">
+                      <strong>Gendre :</strong>
+                    </td>
+                    <td class="border center">{{#if genderF}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>Fille</td>
+                    <td class="border center">{{#if genderM}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>Garçon</td>
+                    <td class="border center">{{#if genderU}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>Non identifié</td>
+                    <td class="border center">{{#if genderX}}<i class="fi-x"></i>{{/if}}</td>
+                    <td>S'identifie autrement</td>
+                  </tr>
+                  <tr>
+                    <td class=""></td>
+                    <td class="fieldnames">mm/dd/yyyy</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <strong>Indiquer si l'élève à des frêres et soeurs à cette école :</strong>
+              </td>
+              <td colspan="2" class="blank">&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 1.5in;" />
+            <col style="width: 1.5in;" />
+        <col style="width: 1in" />
+            <col style="width: 3in" />
+        <col style="width: 1in" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="5">Information démographique
+                <span class="rightfloat thnote">Information des contacts au verso</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>Adresse de l'élève :</strong>
+              </td>
+              <td colspan="4" class="blank">{{ home_address }}</td>
+            </tr>
+      		  <tr>
+              <td>
+                <strong>Téléphone à la maison : </strong>
+              </td>
+              <td colspan="4" class="blank">{{ home_phone }}</td>
+            </tr>
+            <tr>
+              <td colspan="5" class="smallnote">Les adresses alternatives des élèves sont listées ci-dessous. <span class="smallnote bold"> Si l'élève a une autre adresse, veuillez indiquer l'adresse et le type.</span>
+              </td>
+            </tr>
+          </tbody>
+          <thead>
+            <tr>
+              <th class="border">Type d'adresse</th>
+              <th class="border">Étiquette</th>
+              <th colspan="3" class="border">Adresse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="brokenborder">{{ alt_address1_type }}&nbsp;</td>
+              <td class="brokenborder">{{ alt_address1_label }}&nbsp;</td>
+              <td class="brokenborder" colspan="3">{{ alt_address1 }}&nbsp;</td>
+            </tr>
+            <tr>
+              <td class="brokenborder">{{ alt_address2_type }}&nbsp;</td>
+              <td class="brokenborder">{{ alt_address2_label }}&nbsp;</td>
+              <td class="brokenborder" colspan="3">{{ alt_address2 }}&nbsp;</td>
+            </tr>
+            {{#if alt_address2}}
+            <tr>
+              <td class="brokenborder">&nbsp;</td>
+              <td class="brokenborder">&nbsp;</td>
+              <td class="brokenborder smallnote floatright" colspan="3">&nbsp;</td>
+            </tr>
+            {{/if}}
+            <tr>
+              <td><strong>L'élève habite avec :</strong></td>
+              <td class="blank" colspan="4">{{ guardianship }}</td>
+            </tr>
+              <td colspan="2"><strong>Accès à Internet à la maison ?</strong></td>
+              <td class="blank">{{ has_internet }}</td>
+              <td><strong>Accès à un ordinateur/Chromebook/tablette ?</strong></td>
+              <td class="blank">{{ has_device }}</td>
+            </tr>
+            <tr>
+              <td class="smallnote" colspan="52">
+                Les informations sont enregistrées chaque année. Y## = Oui à partir de l'année indiquée et N## = Non à partir de l'année indiquée. Par exemple, N21 = Non, Y21 = Oui.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 3in;" />
+            <col style="width: 1in;" />
+            <col style="width: 3in" />
+            <col style="width: 1in;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="4">Information sur la santé</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <strong>L'élève a une allergie potentiellement mortelle :</strong>
+              </td>
+              <td class="blank">{{ life_threatening_allergy }}</td>
+              <td><strong>Problèmes de santé :</strong></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td><strong>L'élève a besoin d'un Epi-Pen :</strong></td>
+              <td class="blank">{{ epipen }}</td>
+              <td><strong>Médicaments :</strong></td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td colspan="2" class="top">
+                <strong>Substance(s) provoquant une allergie potentiellement mortelle :</strong>
+              </td>
+              <td colspan="2" class="top">
+                <strong>Considérations médicales spéciales :</strong><br>
+                <span class="smallnote">(pour des problèmes ne mettant pas la vie en danger, comme porter des lunettes, des saignements de nez fréquents, etc.)</span>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="tallblank">{{{ alert_medical }}}&nbsp;</td>
+              <td colspan="2" class="tallblank">{{{ medical_considerations }}}&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <colgroup>
+            <col style="width: 2.25in;" />
+            <col style="width: 2.25in;" />
+            <col style="width: 3.5in;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th colspan="3">Auto-identification des Autochtones (optionnel)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>L'élève est présentement inscrit comme :</strong></td>
+              <td class="blank">{{ indigenous }}</td>
+              <td class="italic">Si cette information n'est plus pertinante, veuillez répondre en bas.</td>
+            </tr>
+            <tr>
+              <td class="nest" colspan="3">
+                <table class="nested">
+                  <colgroup>
+                    <col style="width: 6in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 0.7in;" />
+                  </colgroup>
+                  <tr>
+                    <td><strong>L'élève s'identifie-t-il en tant qu'Autochtone ? C'est-à-dire Première Nation, Métis ou Inuk (Inuit)?</strong></td>
+                    <td class="border"></td>
+                    <td>Oui</td>
+                    <td class="border"></td>
+                    <td>Non</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td class="nest" colspan="3">
+                <table class="nested">
+                  <colgroup>
+                    <col style="width: 3in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 2.2in;" />
+                    <col style="width: 0.3in;" />
+                    <col style="width: 2.2sin;" />
+                  </colgroup>
+                  <tr>
+                    <td><strong>Si oui,</strong> qu'est-ce qui décrit le mieux? </td>
+                    <td class="border"></td>
+                    <td>Premières Nations (sur une réserve)</td>
+                    <td class="border"></td>
+                    <td>Inuk (Inuit)</td>
+                  </tr>
+                  <tr style="padding-bottom: 0.05in;">
+                    <td class="final"></td>
+                    <td class="border final"></td>
+                    <td class="final">Premières Nations (hors réserve)</td>
+                    <td class="border final"></td>
+                    <td>Métis</td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr class="noprint pagebreak" />
+      <div class="page">
+        <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
+        <table class="border">
+          <thead>
+            <tr>
+              <th>Transport scolaire</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                Le transport scolaire est géré par la Commission scolaire de langue française. Veuillez communiquer avec l'école pour un changement d'adresse ou avec la CSLF pour plus d'information ou de clarification au 902-854-2975.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="border">
+          <thead>
+            <tr>
+              <th colspan="5">Information des contacts <span class="rightfloat thnote">Pour supprimer un contact, barrez-le entièrement d'un X</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="nest">
+                {{#with contacts.[0]}}
+                  {{> contact_fr}}
+                {{/with}}
+                {{#if contacts.[1]}}
+                  {{#with contacts.[1]}}
+                    {{> contact_fr}}
+                  {{/with}}
+                {{/if}}
+                {{#if contacts.[2]}}
+                  {{#with contacts.[2]}}
+                    {{> contact_fr}}
+                  {{/with}}
+                {{/if}}
+                {{#if contacts.[3]}}
+                  {{#with contacts.[3]}}
+                    {{> contact_fr}}
+                  {{/with}}
+                {{/if}}
+              </td>
+            </tr>
+            {{#if contacts.[4]}}
+              <tr>
+                <td class="center"><strong>Voir page suivante pour des contacts supplémentaires.</strong></td>
+              </tr>
+            {{/if}}
+          </tbody>
+        </table>
+        <div class="signature">
+          <table class="border">
+            <thead>
+              <tr>
+                <td>Renseignements personnels</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Les renseignements personnels sur ce formulaire sont recueillis en vertu de l'article 5B de la Loi sur l'éducation et de l'article 31(c) de la FOIPP Act en ce qui concerne directement et est nécessaire pour fournir des services aux élèves de la Commission scolaire de langue française. Si vous avez des questions sur cette collecte d'informations, vous pouvez contacter la CSLF par téléphone au 902-854-2975.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="noborder">
+            <colgroup>
+              <col style="width: 2in;" />
+              <col style="width: 4.25in;" />
+              <col style="width: 0.75in;" />
+              <col style="width: 1in;" />
+            </colgroup>
+            <tr>
+              <td class="sigline">Signature du parent ou du tuteur légal : </td>
+              <td class="blank"></td>
+              <td class="sigline">Date :</td>
+              <td class="blank"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <hr class="noprint pagebreak" />
+<!-- Supplemental pages -->
+      {{#if supplemental_required}}
+        <div class="page">
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
+          {{#if contacts.[4]}}
+            <table class="border">
+              <thead>
+                <tr>
+                  <th>Contacts supplémentaires <span class="rightfloat thnote">Pour supprimer un contact, barrez-le entièrement d'un X</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="nest">
+                    {{#with contacts.[4]}}
+                      {{> contact_fr}}
+                    {{/with}}
+                    {{#if contacts.[5]}}
+                      {{#with contacts.[5]}}
+                        {{> contact_fr}}
+                      {{/with}}
+                    {{/if}}
+                    {{#if contacts.[6]}}
+                      {{#with contacts.[6]}}
+                        {{> contact_fr}}
+                      {{/with}}
+                    {{/if}}
+                    {{#if contacts.[7]}}
+                      {{#with contacts.[7]}}
+                        {{> contact_fr}}
+                      {{/with}}
+                    {{/if}}
+                    {{#if contacts.[8]}}
+                      {{#with contacts.[8]}}
+                        {{> contact_fr}}
+                      {{/with}}
+                    {{/if}} 
+                  </tbody>
+                </table>
+            </div>
+      <hr class="noprint pagebreak" />
+        <div class="page">
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
+          {{#if contacts.[9]}}
+            {{> contact_fr}}
+          {{/if}}
+          {{#if extended_alert_medical}}
+            <table class="border">
+              <thead>
+                <tr>
+                  <th>Alerte médicale prolongée</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{{ extended_alert_medical }}}</td>
+                </tr>
+              </tbody>
+            </table>  
+          {{/if}}
+          {{#if extended_medical_considerations }}
+            <table class="border">
+              <thead>
+                <tr>
+                  <th>Considérations médicales prolongées</th>
+                </tr>
+              </thead>             
+              <tr>
+                <td>{{{ extended_medical_considerations }}}</td>
+              </tr>
+            </table>
+          {{/if}}
+        </div>
+        {{else}}
+          {{#if extended_alert_medical}}
+          <table class="border">
+            <thead>
+              <tr>
+                <th>Alerte médicale prolongée</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{{ extended_alert_medical }}}</td>
+              </tr>
+            </tbody>
+          </table>  
+        {{/if}}
+        {{#if extended_medical_considerations }}
+          <table class="border">
+            <thead>
+              <tr>
+                <th>Considérations médicales prolongées</th>
+              </tr>
+            </thead>             
+            <tr>
+              <td>{{{ extended_medical_considerations }}}</td>
+            </tr>
+          </table>
+        {{/if}} 
+        </div>
+        <div class="page">
+          <div class="identifier">{{ last_name }}, {{ first_name }} <span class="rightfloat">Niveau scolaire : {{ grade_level }}</span></div>
+        </div>
+      {{/if}}
+  {{/if}}
+{{/each}}

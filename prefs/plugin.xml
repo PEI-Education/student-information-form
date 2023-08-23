@@ -3,7 +3,7 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    description="Student Information Form web report."
    name="PEI Student Information Form"
-   version="0.2.4"
+   version="1.0"
    xsi:schemaLocation="http://plugin.powerschool.pearson.com plugin.xsd">
    <publisher name="PEI Department of Education - Luke Walker">
    <contact email="lawalker@gov.pe.ca"/>
