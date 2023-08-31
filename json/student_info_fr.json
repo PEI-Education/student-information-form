@@ -188,7 +188,12 @@
             phone.ispreferred,
             phone.PHONENUMBERASENTERED,
             phone.PHONENUMBERPRIORITYORDER,
-            cs.code
+            CASE
+               when cs.code = 'Daytime' then 'Jour'
+               when cs.code = 'Home' then 'Maison'
+               when cs.code = 'Mobile' then 'Cellulaire'
+               when cs.code = 'Work' then 'Travail'
+            end as phonetype
          from students s
          left join studentcontactassoc sca
             on s.dcid = sca.studentdcid

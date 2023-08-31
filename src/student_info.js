@@ -1,7 +1,7 @@
 import './css/spinner.css';
 import './css/student_info.css';
 
-const templante = require('./js/student_info.hbs')
+const template = require('./js/student_info.hbs')
 
 // You need to comment out one of the following lines to switch between real data and test data
 /* Real data */ 
